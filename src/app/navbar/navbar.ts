@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class Navbar {
 
+  newtitle: string = "this is the nevber"
+
 }
