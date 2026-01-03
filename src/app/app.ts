@@ -18,7 +18,8 @@ export class App {
   namechange() {
     this.userName = 'Alawoddin khedmat'
   }
-  
+
+  counter: number = 0;
   
   protected readonly title = signal('my-angular-component');
 

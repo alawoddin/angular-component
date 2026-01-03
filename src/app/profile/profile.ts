@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges , OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges , OnInit, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -6,16 +6,32 @@ import { Component, Input, OnChanges, SimpleChanges , OnInit } from '@angular/co
   templateUrl: './profile.html',
   styleUrls: ['./profile.css'],
 })
-export class Profile implements OnChanges  {
+export class Profile implements OnChanges, DoCheck , OnInit   {
+
+  constructor() {
+    console.log("this is for demo ")
+    console.log(this.pUserName)
+  }
+ 
+  ngOnInit() {
+    console.log("this is on int change")
+  }
 
   @Input() pUserName: string = '';
+
+   
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log("hello world");
   }
 
-  ngOnint() {
-    console.log("this is on int change")
+  ngDoCheck() {
+    console.log("ngdocheck samething")
   }
+
+  // changebutton() {
+  //   this.counter ++;
+  // }
+ 
 
 }
