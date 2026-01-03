@@ -1,6 +1,9 @@
 <!-- <app-header></app-header>
 <app-navbar></app-navbar> -->
-<app-footer>
+<!-- <app-footer>
   <p>this is the footer best</p>
-</app-footer>
-<div *ngComponentOutlet="loadcomponent()" ></div>
+</app-footer> -->
+
+<app-profile [pUserName]="userName"></app-profile>
+<button (click)="namechange()">change the user</button>
+<!-- <div *ngComponentOutlet="loadcomponent()" ></div> -->

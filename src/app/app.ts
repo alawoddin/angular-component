@@ -3,20 +3,23 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from "./header/header";
 import { Navbar } from "./navbar/navbar";
 import { Footer } from "./footer/footer";
-import { NgComponentOutlet } from "../../node_modules/@angular/common/types/_common_module-chunk";
+import { Profile } from "./profile/profile";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Navbar, Footer, NgComponentOutlet],
+  imports: [RouterOutlet, Header, Navbar, Footer, Profile],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  constructor () {}
-   loadcomponent() {
-      return Footer ;
-    }
+
+  userName: string = "alawoddin";
+
+  namechange() {
+    this.userName = 'Alawoddin khedmat'
+  }
+  
+  
   protected readonly title = signal('my-angular-component');
-  newtitle:  string= "alawoddin";
 
 }
