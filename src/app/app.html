@@ -7,7 +7,14 @@
 <!-- <app-profile [pUserName]="userName"></app-profile>
 <button (click)="namechange()">change the user</button> -->
 <!-- <div *ngComponentOutlet="loadcomponent()" ></div> -->
-
+<!-- 
 <app-profile>
   <p>the content is take from app </p>
-</app-profile>
+</app-profile> -->
+<h1>{{oldtitle}}</h1>
+<button (click)="uppercase()" >uppercase</button>
+<button (click)="lowercase()">lowercase</button>
+
+<h1>{{oldtitle | uppercase}}</h1>
+<h1>{{oldtitle | lowercase}}</h1>
+<h1>{{oldtitle | titlecase}}</h1>
