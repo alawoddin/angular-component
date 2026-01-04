@@ -28,10 +28,11 @@ export class Profile implements OnChanges, DoCheck , OnInit   {
   ngDoCheck() {
     console.log("ngdocheck samething")
   }
+  counter: number = 0;
 
-  // changebutton() {
-  //   this.counter ++;
-  // }
+  changebutton() {
+    this.counter ++;
+  }
  
 
 }
