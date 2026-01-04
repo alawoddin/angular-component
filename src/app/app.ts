@@ -4,11 +4,11 @@ import { Header } from "./header/header";
 import { Navbar } from "./navbar/navbar";
 import { Footer } from "./footer/footer";
 import { Profile } from "./profile/profile";
-import { CurrencyPipe, DecimalPipe, LowerCasePipe, PercentPipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe, DecimalPipe, LowerCasePipe, PercentPipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Navbar, Footer, Profile, UpperCasePipe, DecimalPipe, PercentPipe, CurrencyPipe,  LowerCasePipe , TitleCasePipe],
+  imports: [RouterOutlet, Header, Navbar, Footer, Profile , DatePipe, UpperCasePipe, DecimalPipe, PercentPipe, CurrencyPipe,  LowerCasePipe , TitleCasePipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -21,6 +21,8 @@ export class App {
   }
 
   counter: number = 0;
+
+  today = new Date();
 
   oldtitle: string = 'ANGULAR APP';
 
