@@ -32,18 +32,30 @@
 
   <!-- date and time -->
 
-  <h1>{{today | date : 'short'}} - short</h1>
+  <!-- <h1>{{today | date : 'short'}} - short</h1>
   <h1>{{today | date : 'long'}} - long</h1>
-  <h1>{{today | date : 'full'}} - full</h1>
+  <h1>{{today | date : 'full'}} - full</h1> -->
 
   <!-- format -->
 
-  <h1>{{today }} - short</h1>
+  <!-- <h1>{{today }} - short</h1>
   <h1>{{today | date}} - short</h1>
-  <h1>{{today | date : 'dd/MM/yyyy'}} - short</h1>
+  <h1>{{today | date : 'dd/MM/yyyy'}} - short</h1> -->
 
   <!-- time format -->
-  <h1>{{today | date : 'hh:mm:ss' }} - short</h1>
-  <h1>{{today | date : 'hh:mm:ss a' }} - short</h1>
+  <!-- <h1>{{today | date : 'hh:mm:ss' }} - short</h1>
+  <h1>{{today | date : 'hh:mm:ss a' }} - short</h1> -->
+
+  <!-- json pipe -->
+
+  <h1>{{user}}</h1>
+  <h1>{{user | json}}</h1>
+  <button (click)="changejson()">convert json</button>
+
+  <!-- slice -->
+   <h1>{{'hello angular world' | slice : 6 : 13}}</h1>
+
+    <!-- chining -->
+   <h1>{{'hello angular world' | slice : 6 : 13 | uppercase}}</h1>
 
 

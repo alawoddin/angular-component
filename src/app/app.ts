@@ -4,11 +4,11 @@ import { Header } from "./header/header";
 import { Navbar } from "./navbar/navbar";
 import { Footer } from "./footer/footer";
 import { Profile } from "./profile/profile";
-import { CurrencyPipe, DatePipe, DecimalPipe, LowerCasePipe, PercentPipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe, DecimalPipe, JsonPipe, LowerCasePipe, PercentPipe, SlicePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Navbar, Footer, Profile , DatePipe, UpperCasePipe, DecimalPipe, PercentPipe, CurrencyPipe,  LowerCasePipe , TitleCasePipe],
+  imports: [RouterOutlet, Header, Navbar, SlicePipe,  JsonPipe, Footer, Profile , DatePipe, UpperCasePipe, DecimalPipe, PercentPipe, CurrencyPipe,  LowerCasePipe , TitleCasePipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -32,6 +32,16 @@ export class App {
 
   lowercase() {
     this.oldtitle = this.oldtitle.toLowerCase();
+  }
+
+  user: any = {
+    name: 'alawoddin',
+    age: 23,
+    email: 'alawoddinkhan84@gmail.com'
+  }
+
+  changejson() {
+    this.user = JSON.stringify(this.user);
   }
   
   protected readonly title = signal('my-angular-component');
