@@ -5,10 +5,14 @@ import { Navbar } from "./navbar/navbar";
 import { Footer } from "./footer/footer";
 import { Profile } from "./profile/profile";
 import { CurrencyPipe, DatePipe, DecimalPipe, JsonPipe, LowerCasePipe, PercentPipe, SlicePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Navbar, SlicePipe,  JsonPipe, Footer, Profile , DatePipe, UpperCasePipe, DecimalPipe, PercentPipe, CurrencyPipe,  LowerCasePipe , TitleCasePipe],
+  imports: [RouterOutlet, Header, Navbar, SlicePipe,  JsonPipe,
+     Footer, Profile , DatePipe, UpperCasePipe, DecimalPipe, PercentPipe,
+      CurrencyPipe,  LowerCasePipe , TitleCasePipe , FormsModule
+    ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -42,6 +46,13 @@ export class App {
 
   changejson() {
     this.user = JSON.stringify(this.user);
+  }
+
+  formsubmit(event: any) {
+    // event.preventDefault();
+    console.log("form is submit");
+    console.log(event);
+    // console.log(event.target.name.value)
   }
   
   protected readonly title = signal('my-angular-component');
