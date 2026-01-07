@@ -64,11 +64,13 @@
   <h1>user form</h1>
 
   <form (submit)="formsubmit(f)" #f="ngForm" >
-   <input type="text" placeholder="enter the name" name="fullname" ngModel #fullname="ngModel" 
+   <input type="text" placeholder="enter the name" minlength="3" name="fullname" ngModel #fullname="ngModel" 
     (change)="getvalue(fullname)" required>
     <div class="alert">
-      @if (fullname.invalid) {
-      <p>full name is required .. </p>
+      @if (fullname.invalid && fullname.touched) {
+        @if (fullname.hasError('minlength')) {
+      <p>name is atless then 3  .. </p>
+        }
 
       }
     </div>
@@ -78,7 +80,7 @@
    <input type="text" placeholder="enter the addres" name="address" ngModel>
    <br><br>
 
-   <button>Submit button</button>
+   <button [disabled]="f.invalid">Submit button</button>
    </form>
 </div>
 
