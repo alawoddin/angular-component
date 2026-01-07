@@ -51,8 +51,12 @@ export class App {
   formsubmit(event: any) {
     // event.preventDefault();
     console.log("form is submit");
-    console.log(event);
+    console.log(event.value);
     // console.log(event.target.name.value)
+  }
+
+  getvalue(fullname:any) {
+    console.log(fullname);
   }
   
   protected readonly title = signal('my-angular-component');
