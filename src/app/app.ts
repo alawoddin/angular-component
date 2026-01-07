@@ -5,13 +5,13 @@ import { Navbar } from "./navbar/navbar";
 import { Footer } from "./footer/footer";
 import { Profile } from "./profile/profile";
 import { CurrencyPipe, DatePipe, DecimalPipe, JsonPipe, LowerCasePipe, PercentPipe, SlicePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Header, Navbar, SlicePipe,  JsonPipe,
      Footer, Profile , DatePipe, UpperCasePipe, DecimalPipe, PercentPipe,
-      CurrencyPipe,  LowerCasePipe , TitleCasePipe , FormsModule
+      CurrencyPipe,  LowerCasePipe , TitleCasePipe , FormsModule , ReactiveFormsModule
     ],
   templateUrl: './app.html',
   styleUrl: './app.css'
